@@ -1,0 +1,32 @@
+.Users {
+
+  position: relative;
+  top: 70px;
+  height: max-content;
+  width: 1000px;
+  margin: 0 auto;
+  
+}
+
+.table-header{
+  background-color: rgba(0, 0, 0, 0.308);
+  
+}
+
+
+
+.tableusers {
+  background-color: rgba(82, 78, 78, 0.401);
+  color: white;
+}
+
+
+
+.titlepanel {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #fff;
+
+}
+
