@@ -23,9 +23,7 @@ const authUser = asyncHandler(async (req, res) => {
         throw new Error('Invalid email or password');
     }
     
-    
 })
-
 
 
 
@@ -60,7 +58,6 @@ const registerUser = asyncHandler(async (req, res) => {
    }
     
 })
-
 
 
 
@@ -144,12 +141,10 @@ const updateUser = asyncHandler(async (req, res) => {
 
 
 const getUsers = asyncHandler(async (req, res) => {
-    
     const users = await User.find({})
     res.json(users)
 
-    
-    
+  
 })
 
 
@@ -163,9 +158,7 @@ const getUserByID = asyncHandler(async (req, res) => {
         res.status(404)
         throw new Error('User not found')
     }
-
-    
-    
+   
 })
 
 

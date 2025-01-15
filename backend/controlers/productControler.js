@@ -24,11 +24,6 @@ const getProducts = asyncHandler(async (req, res) => {
     }
     else if(filter){
         switch (filter) {
-            case 'Rating':
-                const productsbyrating =  await Product.find({}).sort('-rating').exec();
-                res.json(productsbyrating)
-
-                break;
             case 'date':
                 const productsbydate =  await Product.find({}).sort('createdAt').exec();
                 res.json(productsbydate)
@@ -36,7 +31,6 @@ const getProducts = asyncHandler(async (req, res) => {
             case 'highprice':
                 const productsbyhighprice =  await Product.find({}).sort('price');
                 res.json(productsbyhighprice)
-
                     break;
             case 'lowprice':
                 const productsbylowprice =  await Product.find({}).sort('-price').exec();
@@ -92,11 +86,9 @@ const createProduct = asyncHandler(async (req, res) => {
         price : 0,
         description : 'Give a Description about the product',
         user : req.user._id,
-        sizes : [],
         images : ['image 1 url','image 2 url','image 3 url'],
         category : [],
         countInStock :  0,
-        numReviews : 0
 
     })
     const createProduct = await product.save();
@@ -114,7 +106,6 @@ const updateProduct = asyncHandler(async (req, res) => {
         product.price = price
         product.description = description
         product.category = category
-        product.sizes = sizes
         product.images = Images
         product.countInStock = countInStock 
     const updatedProduct = await product.save();

@@ -1,0 +1,72 @@
+.headingA {
+  position: relative;
+  display: flex;
+  font-weight: 800;
+  font-size: 3rem;
+  height: 300px;
+  background: url("./About.jpg")no-repeat center top/cover;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.title {
+  position: relative;
+  right: 20px;
+  opacity: 0;
+  transition: all 0.8s ease;
+  color: white;
+}
+.titleon {
+  transform: translateX(30px);
+  opacity: 1;
+}
+.Content1{
+  text-align: justify;
+  display: grid;
+  column-gap: 60px;
+  row-gap: 10px;
+  font-weight: 180;
+  margin: 80px 70px;
+  color: white;
+}
+.Content1 {
+  grid-template-columns: 65% 35%;
+}
+
+.ImageRow {
+  display: flex;
+  justify-content: space-between; /* Adjust as needed */
+  align-items: center;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+
+
+.mImage {
+  transition: all 0.3s ease-in;
+  box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.537);
+  border-radius: 5%;
+
+
+}
+.Imageabt:hover .mImage {
+  transition: all 0.3s ease-in;
+  transform: scale(1.1);
+}
+
+.text h1 {
+  font-size: 24px;
+  font-weight: 250;
+}
+@media screen and (max-width: 768px) {
+  .Content1 {
+    margin: 190px 30px;
+    grid-template-columns: 1fr;
+  }
+  .imagecontainer::after {
+    bottom: 380px;
+    left: 30px;
+  }
+}
